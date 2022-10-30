@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+}
+
+.wotube_nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav1wrap {
+  display: flex;
+  justify-content: space-around;
+  width: 120px;
+}
+
+.nav2wrap {
+  justify-content: center;
+  display: flex;
+  width: 500px;
+}
+
+.nav3wrap {
+  display: flex;
+  justify-content: space-around;
+  width: 120px;
+}
