@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kakao 지도 시작하기</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="map_wrap">
+      <div
+        id="map"
+        style="
+          width: 100vw;
+          height: 100vh;
+          position: relative;
+          overflow: hidden;
+        "
+      ></div>
+      <script
+        type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c82055ba2003387e2375b09b4ec65c35&libraries=services,clusterer,drawing"
+      ></script>
+      <div id="menu_wrap" class="bg_white">
+        <div class="option">
+          <div>
+            <form onsubmit="searchPlaces(); return false;">
+              키워드 :
+              <input
+                type="text"
+                value=""
+                placeholder="장소, 음식종류 검색"
+                id="keyword"
+                size="15"
+              />
+              <button type="submit">검색하기</button>
+            </form>
+          </div>
+        </div>
+        <hr />
+        <ul id="placesList"></ul>
+        <div id="pagination"></div>
+      </div>
+    </div>
+    <script src="map.js"></script>
+  </body>
+</html>
