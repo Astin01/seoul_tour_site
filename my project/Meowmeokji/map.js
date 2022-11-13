@@ -1,9 +1,32 @@
+//내 위치 정보
+let mylat, mylon;
+let mypos = new kakao.maps.LatLng(mylat, mylon);
+//위치 정보 반환
+function success({ coords }) {
+  mylat = coords.latitude; // 위도
+  mylon = coords.longitude; // 경도
+
+  //위치에 따른 중심 이동
+  map.setCenter(new kakao.maps.LatLng(mylat, mylon));
+}
+
+//위치 정보 요청 처리
+function getUserLocation() {
+  if (!navigator.geolocation) {
+    throw "위치 정보가 지원되지 않습니다.";
+  }
+  navigator.geolocation.getCurrentPosition(success);
+}
+
+//위치 정보 요청
+getUserLocation();
+
 // 마커를 담을 배열입니다
 var markers = [];
 
 var mapContainer = document.getElementById("map"), // 지도를 표시할 div
   mapOption = {
-    center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+    center: new kakao.maps.LatLng(33.450701, 126.570667),
     level: 3, // 지도의 확대 레벨
   };
 
@@ -12,6 +35,12 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 
 // 장소 검색 객체를 생성합니다
 var ps = new kakao.maps.services.Places();
+
+//검색 옵션 객체 생성
+var searchOption = {
+  location: mypos,
+  radius: 1000,
+};
 
 // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
 var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
@@ -24,12 +53,11 @@ function searchPlaces() {
   var keyword = document.getElementById("keyword").value;
 
   if (!keyword.replace(/^\s+|\s+$/g, "")) {
-    alert("키워드를 입력해주세요!");
     return false;
   }
 
   // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
-  ps.keywordSearch(keyword, placesSearchCB);
+  ps.keywordSearch(keyword, placesSearchCB, searchOption);
 }
 
 // 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
@@ -72,6 +100,7 @@ function displayPlaces(places) {
 
     // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
     // LatLngBounds 객체에 좌표를 추가합니다
+
     bounds.extend(placePosition);
 
     // 마커와 검색결과 항목에 mouseover 했을때
