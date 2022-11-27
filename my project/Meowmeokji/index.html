@@ -2,8 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Kakao 지도 시작하기</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>머먹지</title>
     <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/b9913bc774.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="map_wrap">
@@ -22,27 +27,38 @@
       ></script>
       <div id="menu_wrap" class="bg_white">
         <div class="option">
-          <div>
-            <form onsubmit="searchPlaces(); return false;">
-              키워드 :
-              <input
-                type="text"
-                value=""
-                placeholder="장소, 음식종류 검색"
-                id="keyword"
-                size="15"
-              />
-              <button type="submit">검색하기</button>
+          <div id="logo_bar">
+            <div id="logo">M</div>
+            <div>
               <button id="btn_acc">정확도순</button>
               <button id="btn_dis">거리순</button>
-            </form>
+            </div>
+          </div>
+          <form onsubmit="searchPlaces(); return false;">
+            <input
+              type="text"
+              value=""
+              placeholder=" 장소, 음식 검색"
+              id="keyword"
+              size="15"
+            />
+            <!-- <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button> -->
+          </form>
+          <div>
+            <button id="btn_ko">한식</button>
+            <button id="btn_jp">일식</button>
+            <button id="btn_ch">중식</button>
+            <button id="btn_eu">양식</button>
+            <button id="btn_ttk">분식</button>
+            <button id="btn_meat">고기</button>
           </div>
         </div>
-        <hr />
         <ul id="placesList"></ul>
         <div id="pagination"></div>
       </div>
     </div>
-    <script src="map.js"></script>
+    <script src="map_ran.js"></script>
   </body>
 </html>

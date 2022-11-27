@@ -24,12 +24,12 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 250px;
   margin: 10px 10px 10px 10px;
   /* margin: 10px 0 30px 10px; */
+  width: 250px;
   padding: 5px;
   overflow-y: auto;
-  background: rgba(255, 255, 255, 0.7);
+  /* background: rgba(255, 255, 255, 0.7); */
   z-index: 1;
   font-size: 12px;
   border-radius: 10px;
@@ -37,16 +37,10 @@ body {
 .bg_white {
   background: #fff;
 }
-#menu_wrap hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 2px solid #5f5f5f;
-  margin: 3px 0;
-}
-#menu_wrap .option {
+
+/* #menu_wrap .option {
   text-align: center;
-}
+} */
 #menu_wrap .option p {
   margin: 10px 0;
 }
@@ -153,4 +147,41 @@ body {
   font-weight: bold;
   cursor: default;
   color: #777;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #menu_wrap {
+    width: 150px;
+    height: 120px;
+    overflow-y: hidden;
+  }
+  #placesList {
+    visibility: hidden;
+  }
+}
+
+#info_win {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#menu_wrap #keyword {
+  height: 30px;
+}
+
+.option {
+  background-color: #ffa356;
+}
+#logo_bar {
+  display: flex;
+  justify-content: space-between;
+}
+.option #logo,
+#btn_acc,
+#btn_dis {
+  color: white;
+  background-color: #ffa356;
+  border: none;
+  text-decoration: none;
 }
