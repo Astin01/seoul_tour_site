@@ -7,15 +7,38 @@ body div{
     background-color: white;
     padding: 1px 30px;
 }
+hr{
+    border: 0;
+    text-align: center;
+    height: 1px;
+    background-color: #c1c1c1;
+}
 nav div{
+    display: inline-block;
     width: 330px;
     border: 1px solid #c1c1c1;
+}
+nav ul{
+    line-height: 1.8;
+    margin: 0;
+    padding-inline-start: 1.5em;
+  }
+nav a{
+    text-decoration : none;
+    color: cornflowerblue;
+}
+nav img{
+    display: inline-block;
+    float: right;
 }
 article ul{
     list-style: none;
 }
+h1{
+    font-size: 33px;
+}
 h2{
-    font-size: 25px;
+    font-size: 26px;
     font-weight: 500;
 }
 h3{
@@ -71,16 +94,4 @@ figure.western{
 .alcohol img{
     width: 29%;
     height: auto;
-}
-nav ul{
-    line-height: 1.8;
-    margin: 0;
-    padding-inline-start: 1.5em;
-  }
-nav a{
-    text-decoration : none;
-    color: cornflowerblue;
-}
-nav img{
-    float: right;
 }
