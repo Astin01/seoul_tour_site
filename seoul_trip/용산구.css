@@ -3,7 +3,7 @@ div img {
   height: 150px;
 }
 
-div .영등포구_res {
+div .용산구_res {
   width: 200px;
   height: 100px;
 }
@@ -12,7 +12,11 @@ h1 {
   margin: 0;
 }
 
-.영등포구 li {
+section {
+  position: absolute;
+  top: 15%;
+}
+.용산구 li {
   list-style: none;
   float: left;
   line-height: 30px;
