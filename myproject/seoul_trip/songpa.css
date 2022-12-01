@@ -22,7 +22,10 @@ nav ul{
     line-height: 1.8;
     margin: 0;
     padding-inline-start: 1.5em;
-  }
+}
+nav li a:hover{
+    text-decoration-line: underline;
+}
 nav a{
     text-decoration : none;
     color: cornflowerblue;
