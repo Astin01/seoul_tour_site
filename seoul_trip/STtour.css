@@ -40,3 +40,11 @@ section {
   background-color: #809ee3;
   width: 10%;
 }
+.mid_region li {
+  list-style: none;
+  float: left;
+  line-height: 30px;
+  text-align: center;
+  background-color: #809ee3;
+  width: 10%;
+}
