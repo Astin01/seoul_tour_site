@@ -9,6 +9,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 a {
   text-decoration: none;
   display: block;
@@ -21,13 +22,18 @@ a {
   width: 10%;
 }
 .seoul_region #logo {
-  width: 70%;
+  width: 60%;
   text-align: left;
 }
 
 #logo span {
   position: relative;
   left: 5%;
+  display: inline-block;
+}
+#logo {
+  font-size: 24px;
+  font-family: "Lobster", cursive;
 }
 .west_region li {
   list-style: none;
@@ -36,4 +42,16 @@ a {
   text-align: center;
   background-color: #809ee3;
   width: 10%;
+}
+
+.seoul_region a:hover {
+  background-color: #809ee3;
+}
+
+.west_region a:hover {
+  background-color: #0c3490;
+}
+
+.yeongdeung a:hover {
+  background-color: #3663ca;
 }
