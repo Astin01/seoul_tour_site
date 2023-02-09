@@ -2,7 +2,7 @@
 
 ## Intro
 
-A site that organizes tourist information and restaurant information about Seoul.
+A site that give tourist information and restaurant information about Seoul.
 
 ## Page
 
